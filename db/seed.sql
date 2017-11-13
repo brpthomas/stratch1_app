@@ -1,0 +1,20 @@
+DROP TABLE IF EXISTS users;
+DROP TABLE IF EXISTS tasks CASCADE;
+
+
+CREATE TABLE users (
+  id BIGSERIAL PRIMARY KEY,
+  email VARCHAR NOT NULL UNIQUE,
+  password_digest VARCHAR NOT NULL
+);
+
+CREATE TABLE tasks (
+  id SERIAL PRIMARY KEY,
+  task VARCHAR NOT NULL,
+  priority VARCHAR NOT NULL,
+  status VARCHAR NOT NULL, 
+  start_date VARCHAR NOT NULL, 
+  due_date VARCHAR NOT NULL,
+  completion DECIMAL NOT NULL 
+);
+

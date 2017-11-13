@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>My Tasks</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/script.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <a class="create" href="/tasks/new">CREATE A NEW TASK</a> {{#tasksData}}
+        <div class="task">
+            <img src="http://www.clker.com/cliparts/e/q/p/N/s/G/checkbox-unchecked.svg">
+            <h1 class='inline'><a href="/tasks/{{id}}">{{task}}</a></h1>
+        </div>
+        {{/tasksData}}
+    </div>
+</body>
+
+</html>

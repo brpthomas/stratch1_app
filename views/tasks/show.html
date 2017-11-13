@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{{subject}}</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/script.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="task">
+            <img src="http://www.clker.com/cliparts/e/q/p/N/s/G/checkbox-unchecked.svg">
+            <h1 class="inline">{{task}}</h1>
+            <p>{{task}}
+            <p>{{priority}}</p>
+            <p>{{status}}</p>
+            <p>{{start_date}}</p>
+            <p>{{due_date}}</p>
+            <p>{{completion}}</p>
+        </div>
+        <div class="links">
+            <a href="/tasks/">BACK TO ALL TASKS</a>
+            <a href="./{{id}}/edit">EDIT TASK</a>
+            <button class="deleteTask" data-id='{{id}}'>MARK TASK AS COMPLETE</button>
+        </div>
+    </div>
+</body>
+
+</html>
