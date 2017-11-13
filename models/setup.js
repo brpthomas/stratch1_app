@@ -1,10 +1,5 @@
-const pgp = require('pg-promise')();
+pgp = require('pg-promise')();
 
-// this is another way of doing it
-const db = pgp({
-  host: 'localhost',
-  port: 5432,
-  database: 'my_tasks'
-});
+var db = pgp(process.env.DATABASE_URL || 'postgres://superbadpeter@localhost:5432/stractch1_app');
 
 module.exports = db;
